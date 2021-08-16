@@ -6,7 +6,7 @@ Professor: Dr. Jose M. Garrido
 
 Office:Norton J-316
 
-Office Hours: (Virtual interactive) Tues/Thu 7:30pm – 8:15pm, using Zoom
+Office Hours: (Virtual interactive) Tuesday and Thursday 7:30pm – 8:15pm, using Zoom
 
 ---
 
