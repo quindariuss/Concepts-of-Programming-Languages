@@ -30,12 +30,12 @@ class Interpreter(object):
             self.pos += 1
             return token
         if current_char == '+':
-            token = Token('PLUS', current_char)
+            token = Token(PLUS, current_char)
             self.pos += 1
             return token
         self.error()
     def eat(self, token_type):
-        if self.current_token == token_type:
+        if self.current_token.type == token_type:
             self.current_token = self.get_next_token()
         else:
             self.error()
