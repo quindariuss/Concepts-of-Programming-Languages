@@ -37,6 +37,7 @@ This course covers the fundamental concepts on which programming languages are b
 
 | Component   | Weight |
 | :---------- | -----: |
+| Project     |    25% |
 | Final       |    20% |
 | Midterm     |    20% |
 | Assignments |    15% |
