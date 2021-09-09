@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.13)  30 AUG 2021 15:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.13)  30 AUG 2021 20:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -632,7 +632,12 @@ Type  H <return>  for immediate help.
 l.27 \section
              *{Problem Two}
 ? 
-[1 <./trapezoid_area.jpg>] [2] [3] (./report.aux) ) 
+[1 <./trapezoid_area.jpg>] [2]
+! Undefined control sequence.
+l.82 made proudly with \Latex
+                             
+? 
+[3] (./report.aux) ) 
 Here is how much of TeX's memory you used:
  24944 strings out of 478994
  584870 string characters out of 5858184
@@ -641,16 +646,16 @@ Here is how much of TeX's memory you used:
  408840 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  151i,8n,138p,1603b,2295s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/tex
-mf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2021/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fo
-nts/type1/public/cm-super/sfrm1000.pfb>
-Output written on report.pdf (4 pages, 1131555 bytes).
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-supe
+r/cm-super-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1
+000.pfb>
+Output written on report.pdf (4 pages, 1131590 bytes).
 PDF statistics:
  50 PDF objects out of 1000 (max. 8388607)
  35 compressed objects within 1 object stream
