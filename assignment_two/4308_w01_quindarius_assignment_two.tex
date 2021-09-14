@@ -1,11 +1,18 @@
+% arara: pdflatex
 \documentclass{report}
 \usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{forest}
+\usepackage{amsmath}
 \renewcommand{\chaptername}{Section}
 \begin{document}
 \include{titlepage.tex}
-\chapter{Purpose}
-\chapter{Problems}
-\chapter{Summary and Conclusions}
-\chapter{Further Study}
+\part{Problems}
+\include{problems/problem_one.tex}
+\include{problems/problem_two.tex}
+\include{problems/problem_three.tex}
+\include{problems/problem_four.tex}
+\include{problems/problem_five.tex}
+\part{Summary and Conclusions}
 \end{document}
 

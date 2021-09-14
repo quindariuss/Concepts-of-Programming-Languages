@@ -1,0 +1,21 @@
+\section{Convert the following to Backus-Naur Form}
+\begin{align*}
+<Statement> &\mapsto <A> \{b<A>\} \\
+<A> &\mapsto a [b] <A>
+\end{align*}
+\textbf{Answer}
+\begin{align*}
+<Statement> &:= A \\ 
+	    &| \{b<A>\} \\
+A &:= a [b] <A>\\
+\end{align*}
+\paragraph{Explanation of the problem} we are going to but the given expression in Backus-Naur Form. 
+
+\textbf{Backus-Naur Form Consist of:}
+\begin{itemize}
+	\item terminals symbols  
+	\item non-terminals symbols
+\end{itemize}
+
+\paragraph{Why this matters} Backus-Naur Form is the way we specify programming language currently. Invented by John Backus and Peter Naur and many others to help describe programming languages. 
+

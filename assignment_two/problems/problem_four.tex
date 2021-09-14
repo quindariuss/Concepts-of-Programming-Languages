@@ -1,0 +1,14 @@
+\section{A language consists of strings that have n copies of the letter a followed by
+the same number of copies of the letter b, where \(n > 0\). Define the grammar
+specification for the language.}
+\textbf{Answer}
+ \begin{align*}
+<statement> &\mapsto <letter>b \\
+&\mapsto <letter>b, <statement> \\
+<letter> &\mapsto A \\
+&\mapsto B \\
+&\mapsto C \\
+\end{align*}
+
+\paragraph{Explanation of the problem} We are given the task of making a recursive language that can take an arbitrary amount of arguments and also add a slight modification to such language. We must remember that whenever the syntax is on the \textbf{LHS} and the \textbf{RHS} of the equation the grammar is recursive. 
+\paragraph{Why this matters} Because almost all languages are infinite so we must have a solid understanding on how to recursive recognize the language. 

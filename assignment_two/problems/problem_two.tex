@@ -1,0 +1,68 @@
+\section{Given the following grammar specification, draw the corresponding parse tree and write a leftmost derivation for each of the following statements.}
+\begin{align*}
+<assignment> &\mapsto <identifier> = <expression> \\
+<identifier> &\mapsto A \\ 
+&\mapsto B \\ 
+&\mapsto C \\ 
+<expression> &\mapsto <identifier> + <expression> \\
+&\mapsto <identifier> * <expression> \\
+&\mapsto (<expression>) \\
+&\mapsto <identifier> \\
+\end{align*}
+\paragraph{Explanation of the problem}
+we are going to expanded out the statement in the context of the grammar to show all of its derivations in both the text format in the \textbf{leftmost} derivation, and the graphical format of the \textbf{parse tree}. 
+\subsection{\(A=A*(B+(C*A))\)}
+\subsubsection{Leftmost Derivation}
+\begin{align*}
+<assignment> &\mapsto <identifier> = <expression> \\
+&\mapsto A = <expression> \\
+&\mapsto A = <identifier> * <expression> \\
+&\mapsto A = A * <expression> \\
+&\mapsto A = A * (<expression>) \\
+&\mapsto A = A * (<identifier> + <expression>)\\
+&\mapsto A = A * (B + <expression>)\\
+&\mapsto A = A * (B + (<expression>))\\
+&\mapsto A = A * (B + (<identifier> * <expression>))\\
+&\mapsto A = A * (B + (C * <expression>))\\
+&\mapsto A = A * (B + (C * <identifier>))\\
+&\mapsto A = A * (B + (C * A))\\
+\end{align*}
+\subsubsection{Parse Tree}
+
+\begin{forest}
+where n children=0{tier=word}{}
+	[assignment[id[A]][{=}][expression
+	[identifier[A]][{*}][expression
+		[{(expression)}
+			[identifier[(B]][{+}][expression
+				[{(expression)}
+					[identifier[(C]][{*}][expression[identifier[A)]]]]]]]
+]]
+\end{forest}
+\subsection{\(B=C*(A*C+B)\)}
+\subsubsection{Leftmost Derivation}
+\begin{align*}
+<assignment> &\mapsto <identifier> = <expression> \\
+&\mapsto B = <expression> \\
+&\mapsto B = <identifier> * <expression> \\
+&\mapsto B = C * <expression> \\
+&\mapsto B = C * (<expression>) \\
+&\mapsto B = C * (<identifier> * <expression>) \\
+&\mapsto B = C * (A * <expression>) \\
+&\mapsto B = C * (A * <identifier> + <expression>)) \\
+&\mapsto B = C * (A * C + <expression>)) \\
+&\mapsto B = C * (A * C + <identifier>)) \\
+&\mapsto B = C * (A * C + B)) \\
+\end{align*}
+\subsubsection{Parse Tree}
+\begin{forest}
+where n children=0{tier=word}{}
+	[assignment
+		[identifier[B]][{=}][expression
+			[identifier[C]][{*}][expression[(expression)
+				[identifier[(A]][{*}][expression
+				]]
+				[(expression)
+				[identifier[C]][{+}][expression[identifier[B)]]]]
+				]]]
+\end{forest}

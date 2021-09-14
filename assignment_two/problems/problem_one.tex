@@ -1,0 +1,18 @@
+\section{Explain whether the following grammar is ambiguous}
+ \begin{align*}
+<assignment> &\mapsto <identifier> = <expression>\\
+	<identifier> &\mapsto A \\
+	 &\mapsto B \\
+	 &\mapsto C \\
+<expression> &\mapsto <expression> + <expression> \\
+	 &\mapsto <expression> + <expression> \\
+	 &\mapsto <expression> * <expression> \\
+	 &\mapsto <expression> \\
+	 &\mapsto <identifier> \\
+\end{align*}
+\paragraph{Explanation of the problem}, we are trying to determine if the grammar provided will be classified as ambiguous. 
+\paragraph{Answer to the problem}
+, the statement will be classified as ambiguous. 
+This is because the grammar will generate and sentential form with two distinct parse trees. 
+\paragraph{Why this matters}
+, the complier chooses what code to run based off the size of its parse tree. So when there is ambiguity then the complier has a hard time choosing which code to run because it cannot be determined uniquely. 
