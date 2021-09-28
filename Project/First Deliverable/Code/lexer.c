@@ -5,12 +5,21 @@
 
 int main()
 {
+	char file_name[25];
+	FILE *fp;
+	printf("Enter file name of basic program: \n");
+	gets(file_name);
+	fp = fopen(file_name, "r");
+	if (fp == NULL)
+	{
+		perror("Error opening this file");
+	}
 	int character, 				// Gets individual character input
 	    tokens, 				// Count of tokens 
 	    state;				// Determines if we are inside or outside a word
 	state = OUT;
 	tokens = 0; 
-	while ((character = getchar()) != EOF)	//Loops through the input		
+	while ((character = fgetc(fp)) != EOF)	//Loops through the input		
 	{
 		printf("%c",character); 	
 		// If statement to check if we are in a word
@@ -27,4 +36,5 @@ int main()
 		}
 	}
 	printf("\nTokens : %d\n",tokens);
+	fclose(fp);
 }
