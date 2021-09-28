@@ -1,0 +1,96 @@
+\documentclass{report}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{forest}
+\usepackage{amsmath}
+\usepackage{multicol}
+\begin{document}
+\include{titlepage.tex}
+
+\section*{Task}
+The development of an interpreter for a subset of \textbf{Basic Language}. 
+
+\vspace{0.5cm}
+
+\subsection*{Project Goals}
+\begin{itemize}
+	\item Process a \textbf{Basic Language} source code file. 
+	\item Tokenize the source code file. 
+	\item Detect syntactical error.
+	\item Display appropriate error messages during runtime. 
+\end{itemize}
+
+\subsection*{Deliverable Goals}
+\begin{itemize}
+	\item Develop a grammar for the subset of \textbf{Basic Language} that I will be using. 
+	\item Arrays for the \emph{Keywords} and \emph{Identifiers}
+	\item Ability to input source code to lexer. 
+	\item Output tokens scanned. 
+\end{itemize}
+
+\subsection*{Subset of the Basic Language}
+The subset of basic that I want to define for the course project is going to be kept as minimal as possible to focus on the process of developing an interpreter. 
+With that in mind the lowest we can go is turing complete of course. 
+For this to be true the language doesn't need much. 
+
+\begin{multicols}{2}
+\begin{itemize}
+	\item Recursive Operators
+		\begin{itemize}
+			\item \texttt{FOR...TO...NEXT}
+		\end{itemize}
+	\item Conditional Jumps 
+		\begin{itemize}
+			\item \texttt{IF...THEN...\{ELSE\}}
+			\item \texttt{GOTO}
+		\end{itemize}	
+	\item Variables
+		\begin{itemize}
+			\item \texttt{LET}
+		\end{itemize}
+\end{itemize}
+\columnbreak
+\subsection*{Tokens}
+\begin{itemize}
+	\item LET
+	\item IF 
+	\item FOR 
+	\item GOTO
+	\item +
+	\item -
+	\item *
+	\item /
+	\item =
+\end{itemize}
+
+\end{multicols}
+\subsection*{Backus Normal Form of Basic Subset}
+\begin{align*}
+BASIC \; PROGRAM &::=				\\ 
+	&|\; EXPRESSION, EXPRESSION 		\\
+	&|\; EXPRESSION				\\
+	EXPRESSION &::=				\\
+	&|\; LET				\\
+	&|\; IF					\\
+	&|\; FOR 				\\
+	&|\; GOTO				\\
+	&|\; IDENTIFIER\;+\;EXPRESSION		\\
+	&|\; IDENTIFIER\;-\;EXPRESSION		\\
+	&|\; IDENTIFIER\;*\;EXPRESSION		\\
+	&|\; IDENTIFIER\;/\;EXPRESSION		\\
+	LET &::=				\\
+	&| IDENTIFIER = EXPRESSION		\\
+	IDENTIFIER &::=				\\
+	&|\; [a-zA-Z] 				\\
+	&|\; [a-zA-Z],[a-zA-Z]			\\
+	IF &::=					\\
+	&|\; EXPRESSION\;then\;STATEMENT	\\
+	&|\; EXPRESSION\;then\;STATEMENT\;else\;IF\\
+	FOR &::=				\\
+	&|\;EXPRESSION\;to\;EXPRESSION\;STATEMENT\;next\\
+	GOTO &::=				\\
+	&|\; [0-9] 				\\
+	&|\; [0-9],[0-9] 			\\
+\end{align*}
+
+\end{document}
