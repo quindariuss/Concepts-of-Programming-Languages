@@ -1,11 +1,3 @@
-
-
-# Change a Course Object 
-
-# Store the Course Object 
-
-# Show all the values for the courses
-
 # Creating a Course Object
 class Course: 
     def __init__(self, name, number, section, term, year, student_count):
@@ -20,9 +12,10 @@ class Course:
 Courses = []
 course_test = Course("Math", "2102","W02", "Fall", "2022", "35")
 
+# Adding a test course
 Courses.append(course_test)
-print(Courses[0].name)
 
+# Variable to be used as an argument passer
 argument = ''
 print(
         """
@@ -56,11 +49,13 @@ Commands:
     exit        exits the command prompt
 
 """)
+# Exit Control Flow 
 while argument != 'exit':
     argument = input(
     """
 ~~Course Adder~~ 
     """)
+    # If Statements to parse the argument variable 
     if argument == 'add':
         course_to_add = Course(input("What is the name of the course?"), input("Course Number"),input("Section"), input("Term"), input("Year"), input("Students"))
         Courses.append(course_to_add);
@@ -129,7 +124,3 @@ Commands:
     exit        exits the command prompt
         """
         ) 
-
-def list():
-    print('hello')
-
