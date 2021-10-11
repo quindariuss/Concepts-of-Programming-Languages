@@ -18,7 +18,7 @@ class Course:
 
 # Defining an array of courses
 Courses = []
-course_test = Course("Math", 2102,"W02", "Fall", 2022, 35)
+course_test = Course("Math", "2102","W02", "Fall", "2022", "35")
 
 Courses.append(course_test)
 print(Courses[0].name)
@@ -67,13 +67,17 @@ while argument != 'exit':
         for index in range(0, len(Courses)):
             print(
                     """
-                    ----------------------------
-                    Course Name: %s
-                    ----------------------------
-                    """ % Courses[index].name 
+                    ||||||||||||||||||||||||||||
+                               %s %s 
+                       Section %s of %s %s
+                    ||||||||||||||||||||||||||||
+                    """ % (Courses[index].name, Courses[index].number, Courses[index].section, Courses[index].term, Courses[index].year)
+
                     )
     elif argument == 'change':
         print('Add function')
+    elif argument == 'exit':
+        print('Logging off...')
     else :
         print('That is not a command, here is a reminder: ')
         print("""
