@@ -62,7 +62,7 @@ while argument != 'exit':
 ~~Course Adder~~ 
     """)
     if argument == 'add':
-        print('Add function')
+        course_to_add = Course(input("What is the name of the course?"), input("Course Number"),input("Section"), input("Term"), input("Year"), input("Students"))
     elif argument == 'list':
         for index in range(0, len(Courses)):
             print(
