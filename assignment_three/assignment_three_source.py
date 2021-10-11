@@ -24,7 +24,71 @@ Courses.append(course_test)
 print(Courses[0].name)
 
 argument = ''
+print(
+        """
+┌──────────────────────────────────────┐
+│     ____                             │
+│    / ___|___  _   _ _ __ ___  ___    │
+│   | |   / _ \| | | | '__/ __|/ _ \   │
+│   | |__| (_) | |_| | |  \__ \  __/   │
+│    \____\___/ \__,_|_|  |___/\___|   │
+│                                      │
+│        _       _     _               │
+│       / \   __| | __| | ___ _ __     │
+│      / _ \ / _` |/ _` |/ _ \ '__|    │
+│     / ___ \ (_| | (_| |  __/ |       │
+│    /_/   \_\__,_|\__,_|\___|_|       │
+│                                      │
+└──────────────────────────────────────┘
+    Description:
+        Allows you to add and
+        manage your courses the way you
+        like em!
 
+Commands:
+
+    add         starts interactive prompt for adding a new course
+
+    list        shows all the courses in the program
+
+    change      starts interactive prompt to change a course attributes
+
+    exit        exits the command prompt
+
+""")
 while argument != 'exit':
-    argument = input("What would you like to do, or enter exit to cancel")
+    argument = input(
+    """
+~~Course Adder~~ 
+    """)
+    if argument == 'add':
+        print('Add function')
+    elif argument == 'list':
+        for index in range(0, len(Courses)):
+            print(
+                    """
+                    ----------------------------
+                    Course Name: %s
+                    ----------------------------
+                    """ % Courses[index].name 
+                    )
+    elif argument == 'change':
+        print('Add function')
+    else :
+        print('That is not a command, here is a reminder: ')
+        print("""
+Commands:
+
+    add         starts interactive prompt for adding a new course
+
+    list        shows all the courses in the program
+
+    change      starts interactive prompt to change a course attributes
+
+    exit        exits the command prompt
+        """
+        ) 
+
+def list():
+    print('hello')
 
