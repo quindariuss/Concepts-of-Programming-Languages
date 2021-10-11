@@ -63,34 +63,55 @@ while argument != 'exit':
     """)
     if argument == 'add':
         course_to_add = Course(input("What is the name of the course?"), input("Course Number"),input("Section"), input("Term"), input("Year"), input("Students"))
+        Courses.append(course_to_add);
+        print(
+              """
+                      Added Course
+              ||||||||||||||||||||||||||||
+                         %s %s 
+                 Section %s of %s %s
+              ||||||||||||||||||||||||||||
+              """ % (course_to_add.name, course_to_add.number, course_to_add.section, course_to_add.term, course_to_add.year)
+              )
     elif argument == 'list':
         for index in range(0, len(Courses)):
             print(
                     """
+                    Index: %i
                     ||||||||||||||||||||||||||||
                                %s %s 
                        Section %s of %s %s
                     ||||||||||||||||||||||||||||
-                    """ % (Courses[index].name, Courses[index].number, Courses[index].section, Courses[index].term, Courses[index].year)
-
+                    """ % (index,Courses[index].name, Courses[index].number, Courses[index].section, Courses[index].term, Courses[index].year)
                     )
     elif argument == 'change':
-       course_to_change = input("Whats the number of the course you would like to change")
-       course_changer = input("What value would you like to change")
+       course_to_change_input = input("Whats the index of the course you would like to change: ")
+       course_to_change = Courses[int(course_to_change_input)] 
+       course_changer = input("What value would you like to change: ")
        while course_changer != 'done':
-           course_changer = input("What else")
            if course_changer == 'name':
-                print('Changing name')
+               course_to_change.name = input("New Name: ") 
+               print('Changing name')
            elif course_changer == 'number':
+               course_to_change.number = input("New Number: ") 
                print('Changing name')
            elif course_changer == 'section':
+               course_to_change.section =  input("New Section: ") 
+
                print('Changing name')
            elif course_changer == 'year':
+               course_to_change.year =  input("New Year: ") 
+
                print('Changing name')
            elif course_changer == 'term':
+               course_to_change.term =  input("New Term: ") 
+
                print('Changing name')
            elif course_changer == 'students':
+                course_to_change.student_count =  input("New Student Count: ") 
+
                 print('Changing name')
+           course_changer = input("What other value would you like to change?")
             
     elif argument == 'exit':
         print('Logging off...')
