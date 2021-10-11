@@ -75,7 +75,23 @@ while argument != 'exit':
 
                     )
     elif argument == 'change':
-        print('Add function')
+       course_to_change = input("Whats the number of the course you would like to change")
+       course_changer = input("What value would you like to change")
+       while course_changer != 'done':
+           course_changer = input("What else")
+           if course_changer == 'name':
+                print('Changing name')
+           elif course_changer == 'number':
+               print('Changing name')
+           elif course_changer == 'section':
+               print('Changing name')
+           elif course_changer == 'year':
+               print('Changing name')
+           elif course_changer == 'term':
+               print('Changing name')
+           elif course_changer == 'students':
+                print('Changing name')
+            
     elif argument == 'exit':
         print('Logging off...')
     else :
