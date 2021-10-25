@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.20)  11 OCT 2021 16:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.20)  11 OCT 2021 20:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -658,25 +658,66 @@ Package pdftex.def Info: kennesawlogo.png  used on input line 26.
 
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./kenne
-sawlogo.png>]) (./4308_w01_quindarius_assignment_three.aux
-(./titlepage.aux)) ) 
+sawlogo.png>])
+<source.png, id=15, 2904.8525pt x 1959.32pt>
+File: source.png Graphic file (type png)
+<use source.png>
+Package pdftex.def Info: source.png  used on input line 26.
+(pdftex.def)             Requested size: 345.0pt x 232.68661pt.
+<run.png, id=16, 2904.8525pt x 1959.32pt>
+File: run.png Graphic file (type png)
+<use run.png>
+Package pdftex.def Info: run.png  used on input line 28.
+(pdftex.def)             Requested size: 345.0pt x 232.68661pt.
+ [1
+
+
+ <./source.png>]
+<add.png, id=23, 2331.71124pt x 1847.90375pt>
+File: add.png Graphic file (type png)
+<use add.png>
+Package pdftex.def Info: add.png  used on input line 30.
+(pdftex.def)             Requested size: 345.0pt x 273.39525pt.
+ [2 <./run.png>]
+<list.png, id=28, 2331.71124pt x 1847.90375pt>
+File: list.png Graphic file (type png)
+<use list.png>
+Package pdftex.def Info: list.png  used on input line 32.
+(pdftex.def)             Requested size: 345.0pt x 273.39525pt.
+ [3 <./add.png>]
+<change.png, id=33, 2331.71124pt x 1847.90375pt>
+File: change.png Graphic file (type png)
+<use change.png>
+Package pdftex.def Info: change.png  used on input line 34.
+(pdftex.def)             Requested size: 345.0pt x 273.39525pt.
+ [4 <./list.png>]
+<listchange.png, id=38, 2331.71124pt x 1847.90375pt>
+File: listchange.png Graphic file (type png)
+<use listchange.png>
+Package pdftex.def Info: listchange.png  used on input line 36.
+(pdftex.def)             Requested size: 345.0pt x 273.39525pt.
+ [5 <./change.png>] [6 <./listchange.png>]
+(./4308_w01_quindarius_assignment_three.aux (./titlepage.aux)) ) 
 Here is how much of TeX's memory you used:
- 22694 strings out of 478994
- 547307 string characters out of 5858184
+ 22741 strings out of 478994
+ 547893 string characters out of 5858184
  838929 words of memory out of 5000000
- 39866 multiletter control sequences out of 15000+600000
- 404940 words of font info for 32 fonts, out of 8000000 for 9000
+ 39912 multiletter control sequences out of 15000+600000
+ 406187 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,5n,102p,1632b,230s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr17.pfb>
-Output written on 4308_w01_quindarius_assignment_three.pdf (1 page, 55327 bytes
-).
+{/usr/local/tex
+live/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texl
+ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texli
+ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive
+/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2
+021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/202
+1/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on 4308_w01_quindarius_assignment_three.pdf (7 pages, 13049680 b
+ytes).
 PDF statistics:
- 26 PDF objects out of 1000 (max. 8388607)
- 17 compressed objects within 1 object stream
+ 67 PDF objects out of 1000 (max. 8388607)
+ 38 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 48 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,168 @@
+CS4308 W01 Fall 2021 Quiz #1 Solution
+ 
+Q1
+Why are there many programming languages? Provide arguments. What does a grammar describe?
+(b) What is a terminal in a grammar? Give an example.
+
+a.) Programming languages are designed specific types of problems. Comparing JavaScript and C, are two very different languages with very different goals.
+
+The programming languafes C and Fortran are yje ones often used for high-performance computing.
+JavaScript is mostly used for web applications and higher level programming. For this reason, a lot of features are abstracted out so that the developer using the language can focus on building out their higher level program instead of having to manually deal with more intense concepts such as memory management. In this particular example, JavaScript uses a garbage collector to manage memory so that language user does not have to worry about it.
+
+C is mainly used for lower level programming, such as systems programming, so it needs to be fast, have more direct access to the hardware, and have less abstractions. Going back to the memory management example, there is no garbage collector in C. This means that the developer using the language must manage memory manually.
+ 
+A grammar describes the syntax rules that are allowed in the language. The form of every statement and the keywords used are specified in the grammar.
+
+b.) A terminal is a term in a grammar that cannot be further derived. Keywords, constants, literal strings are examples of terminals.
+ 
+ 
+Q2
+a) Why are some programming languages compiled and others interpreted? Explain. (b) Is Java interpreted or compiled. Explain.
+ 
+a.)
+Programs of compiled languages, after being compiled and linked, execute much faster than their interpreted counterparts. This is because the source language is compiled and linked to generate an executable code of the machine's native language (called machine code), allowing the machine to execute  machine code directly. Compiled languages also have the added advantage of compiler optimization, in which the language's compiler can find redundant or poorly structured code and compile it into machine code that is better structured and runs fasters than the original source code. Languages such as C, C++, Ada, Fortran, are compiled.
+ 
+On the other hand, interpreted languages’ programs are interpreted statement by statement by an interpreter.  However, this makes interpreted languages much slower than compiled languages. Interpreted languages do provide some benefits over compiled languages, however, such as platform independence. Most scripting languages, including Javascript and Python are interpreted.
+ 
+b.) Java is considered a Hybrid Language, meaning that it is both compiled and interpreted. The java compiler translates Java source code into an intermediate language called byte code, which is then interpreted by the Java Virtual Machine.
+ 
+There are  Just in Time (JIT) compilers  systems that compile Java byte code directly to Machine Code during processing. On top of this, the system saves whatever byte code compilation has already been executed, so that if the interpreter runs into it again, it can simply execute the already saved compiled Machine Code instead of compiling it again. This system is called a Just-In-Time compiler, and one of its main benefits is that it increases execution speed.
+ 
+Q3
+(a) What  notations are used for specifying syntax grammar rules of a language? Explain.
+ 
+(b) Explain how operator precedence can be specified in a grammar. Provide an example.
+ 
+(a) BNF is also called Backus-Naur Form is the notation used to specify the rules of the grammar and so, describe the syntax of programming languages. It specifies the grammar rules of a language and can describe lists of similar constructs, the order in which different constructs must appear, and nested structures to any dept. The main purpose of the BNF is act like a meta-language which is a language use to describe another language. In this case, it uses to describe the grammar of programming languages.
+BNF uses abstractions for syntactic structures. For example, (assign) -) (var)= (expression). The text on the left side is the abstraction being defined. The text on the right is the definition of the text on the left. The abstractions (var) and (expression) obviously must be defined for the (assign) definition to be useful. EBNF is an extension to BNF. These notations are used to design the parser of a language processor.
+ 
+b) Operator precedence can be specified in the BNF for a language by unique rules for different operations which have different levels of precedence. Beginning from the start symbol, a grammar can specify that an operation with a lower level of precedence must be first derived before an operation with a higher level of precedence can be derived, ensuring that the operation with higher precedence will be lower on the parse tree and thus executed first.
+ 
+For example, a grammar can specify that the start symbol <assign> is defined as <var> = <expression>. <expression> can be reserved for addition, with a rule such as <expression> = <expression> + <product> | <product>, which must be derived first before <product>, which specifies multiplication, can be reached. <product> could then be defined as <product> * <factor> | <factor>, and so multiplication will be lower on the parse tree than addition in this instance. This will give multiplication operator precedence over addition.
+ 
+ 
+Example x *4 + y * 5
+if multiplication has been assigned a higher precedence than addition; then will be done first then the addition of the results on both sides of the addition sign will be added.
+ 
+ 
+ 
+Q4
+ 
+(a) Some languages are not programming languages. Explain.
+ 
+(b) What are the differences between a lexeme and a token? Explain.
+ 
+Programming languages are designed languages with a specific purpose and goal. Other languages, such as natural languages, spawned or evolved naturally from humans. Programming languages are context-free, in that context of the subject being described does not ever need to be known to understand them.
+Some computer languages are not programming languages. HTML is not a  programming language but used for structural purposes. It is a mark-up language that constructs, web images into interactive forms. Similarly, UML is not a programming language. It is used to describe various parts of a software system.
+ 
+ 
+ 
+b.) Lexemes are the lowest level units that make up programming languages. You can almost think of them in the same way a physicist might think of Quarks as being the smallest unit of matter. When you put many lexemes together in the right other, you get a program. Some examples of lexemes in programming languages are special words, such as 'for', 'while', and 'do' as well as operators, like '+', '=', and '*'.
+ 
+Tokens, on the other hand, are categories of Lexemes. In other words, they are abstractions used to describe lexemes. Thus, when a Lexeme is used, it is considered to be an instance of a token. Examples of tokens are 'number', 'plus_operator', and 'i(b)            An example of a token is identifier, which are names of variables, methods. Those groups are represented by a name which also called a token. Another example, a token is 'arith_operator; a lexeme is one of the following: (x, y, +, -, *, /). Both are terminals in a grammar.
+ 
+Both lexemes and tokens can be terminals in a grammar because lexeme is the lowest level syntactic unit of a language. These lexemes are partitioned into groups- called tokens.
+For example, identifiers, names of variables, methods. Those groups are represented by a name which also called a token. Another example, a token is 'arith_operator; a lexeme is one of the following: (+, -, *, /). Both are terminals in a grammar.
+
+CS4308 W01 Fall 2021 Quiz #2 Solution
+ 
+Q1
+What are the differences between syntax and semantics? (b) How are these differences  indicated in the syntax rules? Explain.
+ 
+Syntax describes the structure and form of language statements while semantics deals with the meaning of said statements.
+These differences  can be applied in a simple way by using attribute grammars. By providing static semantic rules, attribute grammars better check the correctness of a program more than a context-free grammar specified in BNF. An additional simple semantic checking within syntax is the comparison of types in assignment statements.
+ 
+Syntax
+<assign> -> <var> = <expr>
+<expr> -> <var> + <var> | <var>
+<var> A | B | C
+actual_type: synthesized for <var> and <expr>
+expected_type: inherited for <expr>
+
+Syntax rule:  <expr>  -> <var>[1] + <var>[2]
+    Semantic rules:
+    <expr>.actual_type -> <var>[1].actual_type
+   Predicate:
+    <var>[1].actual_type == <var>[2].actual_type
+    <expr>.expected_type == <expr>.actual_type
+
+Syntax rule:  <var>  -> id
+   Semantic rule:
+
+    <var>.actual_type -> lookup (<var>.string)
+ 
+Q2
+How does the parser communicate with the scanner? Explain. (b) What data is transferred? Explain.
+ 
+ 
+The parser depends on the scanner because the parser recognizes complete language statements as defined in its grammar, the scanner recognizes complete source symbols. So the parser calls the scanner (top) function every time it needs a new symbol (lexeme). 
+ 
+B) The parser requests tokens from the scanner and the scanner sends each token and the corresponding lexeme to the parser.
+ 
+Q3
+a) Explain the differences between lexical (analyzer) and a scanner?  (b) How are the syntax rules used in implementing a language processor (compiler or interpreter)? Explain.
+ 
+(b) How are the syntax rules used in implementing a language processor (compiler or interpreter)? Explain.
+ 
+Lexical analysis is the first stage of a three-part process of the compiler (or interpreter).   The role of the lexical analysis is to recognize symbols in the source code into lexemes and classify each   (token), according to the lexical rules specified. The program that performs the lexical analysis is called scanner and is typically a function. If there are no rules that define a particular sequence of characters the scanner reports an error.
+ 
+Examples of lexical rules:
+ 
+intlit = sign (0 | [1-9]).
+This regular expression defines a lexical rule that assigns the intlit token to the corresponding lexeme, this lexical rule may also be specified with a finite state automata (state-transition diagram).  Another example:
+alpha= [A-Z]
+ 
+This lexical rule states how to assign the letter token to the corresponding lexeme (Here, the letters from A to Z). The scanner must implement this.
+ 
+ 
+Example of syntax rules (using BNF):
+<if_stmt> → if ( <logic_expr> ) <stmt>
+    <if_stmt> → if ( <logic_expr> ) <stmt> else <stmt>
+ 
+Syntax rules are used by compiler (or interpreter) developers as the specification of the parser to implement.   Without the rules, the implementation of a compiler or interpreter would be extremely difficult because the English definition of a programming language is generally imprecise and incomplete. The syntax rules provide more precise and complete description of how the language is supposed to be implemented. The syntax rules in the appropriate notation (BNF or EBNF) are also used as the input to parser generator tools, such as Yacc and Bison.
+ 
+ 
+Q4
+a) Explain the advantages and disadvantages of recursive descent parsing. Explain.
+(b) Include at least one advantage and one disadvantage of bottom-up parsing.
+ 
+a) Advantages of top-down parsing :
+1. A recursive-descent parser is an LL parser that is implemented by direct programming to implement a function of the non-terminals in the rules of the grammar of the source language.
+2. Better control of some implementation issues such as implementing error recovery.
+3. EBNF is commonly used for specifying the grammar to be implemented using recursive-descent parsing techniques.  EBNF for arithmetic expressions,  does not force any associativity rule for the implementation of compiler. Therefore, when using such a grammar as the basis for a compiler, one must take care to ensure that the code generation process, which is normally driven by syntax analysis, produces code that adheres to the associativity rules of the language. This can easily be done
+when recursive-descent parsing is used.
+ 
+Disadvantages of top-down parsing:
+1.Two distinct grammar characteristics prevent the construction of a:w
+
+recursive-descent parser based on the grammar. One of these is left recursion.
+2.The other disadvantage is detected with the pairwise disjointness test, which tests whether a parsing subprogram can determine which RHS is being parsed on the basis of the next token of input.
+3. Only simple grammars are suitable for a parser development using top0down parsing.
+ 
+A disadvantage of bottom-up parsing: This is a more complex parsing technique and is usually done with a suitable tool.
+An advantage of bottom-up parsing is that it can handle almost all context-free grammars.  
+Left recursion is not a problem for bottom-up parsing algorithms.
+CS4308 Quiz#3 Solution  Fall 2021
+ 
+Question 1
+Explain the differences between the input/output of the scanner vs the parser. 
+
+The input of the scanner is the source code file being processed. This is read as a sequence of characters, that are grouped into lexemes and determine the corresponding token. This and lexical errors becomes the output of the scanner.
+ 
+The input of the parser is the lexeme and token produced by the scanner. Calling the scanner several times to recognize a correct sentence according to the language statement specified in the grammar. The output of the parser is any representation of the language statement recognized, possibly as a parse tree. In addition, the parser produces syntax error messages.
+ 
+ 
+Question 2
+ 
+Explain the differences between a terminal symbol and a keyword in a grammar. (b) Is the symbol table defined in the scanner or in the parser? Explain.
+ 
+A keyword is a word reserved in the grammar of the source language of the program because it has a special meaning. Terminal symbols are those that cannot be further derived from the grammar  rules. Keywords are terminal symbols as both do not have replacement symbols.
+ 
+The symbol table is initially defined in the scanner and is used as a database of identifiers used in the language processor of the input source program. The scanner also defines the keyword table and it uses it to decide whether a lexeme is a keyword.
+Question 3
+What are the general steps from the grammar to the implementation of the scanner? Explain.
+ 
+The grammar of a language includes lexical rules and syntax rules.
+ 
+There are several steps to implement a scanner starting from the lexical rules of the language and it depends on the approach applied to implement a scanner.
+In one approach, write a formal description of the lexica; rules, such as regular expressions and can be used as inputs to a software tool that automatically generate a scanner. In another approach, design a state transition diagram that describes the lexical rules. Then write a program that implements the state diagram. A third approach is to hand-construct a table-driven implementation of the state diagram. 
