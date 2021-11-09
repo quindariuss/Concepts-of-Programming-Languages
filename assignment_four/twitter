@@ -1,0 +1,6 @@
+Loops are kind of what you would expect they have a base loop that builds all the other loops like to while, for and do while loops. 
+
+The packages are made by using the .ads file ending. You call it by specifying `with` then the package name.
+Or, you can also just make the whole package avalible by using the `use Week;`
+
+You can have types in Ada of course, and this is where we are getting into what I need for my assignment. Here we have a complex number type that will store my real and imaginary values and print out the values as I need them
