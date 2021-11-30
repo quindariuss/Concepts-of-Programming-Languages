@@ -1,3 +1,0 @@
-LET statement = hello world ,
-LET four = 2 + 2 ,
-FOR 0 in 100 let statement = hello world next
