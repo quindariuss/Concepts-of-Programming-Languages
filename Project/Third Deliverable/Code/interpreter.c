@@ -19,5 +19,14 @@ int main(void)
 	symbol1.index = 0;
 	
 	printf("symbol 1 information: %s", symbol1.word);
+
+	/*Test Array of Structures*/
+	struct symbol symbols[10];
+	strcpy(symbols[0].word, "A word goes here from an array");
+	strcpy(symbols[0].type, "A type goes here");
+	strcpy(symbols[0].type_details, "A type def goes here");
+	symbol1.index = 0;
+
+	printf("symbol 0 Array Information: %s", symbols[0].word);
 }
 
