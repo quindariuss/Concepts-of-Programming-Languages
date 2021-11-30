@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ctype.h>
 #include <string.h>
 // A structure to hold the values of a symbol.
 struct symbol 			
@@ -8,25 +9,55 @@ struct symbol
 	char type_details[30];
 	int index;
 };
+/*Probably wont even use this*/
+struct let
+{
+	/*
+	   0 is false 
+	   1 is true
+	 */
+	int isword;
+	char value[100];
+	int numvalue;
+};
 
 int main(void)
 {
-	/*Testing Symbol Structure*/
-	struct symbol symbol1;
-	strcpy(symbol1.word, "A word goes here");
-	strcpy(symbol1.type, "A type goes here");
-	strcpy(symbol1.type_details, "A type def goes here");
-	symbol1.index = 0;
-	
-	printf("symbol 1 information: %s", symbol1.word);
+	int index;
+	int word_count = 68;
+	char words[word_count][45];
 
-	/*Test Array of Structures*/
-	struct symbol symbols[10];
-	strcpy(symbols[0].word, "A word goes here from an array");
-	strcpy(symbols[0].type, "A type goes here");
-	strcpy(symbols[0].type_details, "A type def goes here");
-	symbol1.index = 0;
+	/*Array of Structures*/
+	struct symbol symbols[12];
 
-	printf("symbol 0 Array Information: %s", symbols[0].word);
+	for (index = 0; index < 68; index++)
+	{	
+		scanf("%s",words[index]);
+	}
+
+	for (index = 0; index < 68; index++)
+	{	
+		printf("%s\n",words[index]);
+		if (!strcmp("LET",words[index]))
+		{
+			printf("We gotta let\n");
+		}
+		else if (!strcmp("0",words[index]) ||!strcmp("1",words[index]) ||!strcmp("2",words[index]) ||!strcmp("3",words[index]) ||!strcmp("4",words[index]) ||!strcmp("5",words[index]) ||!strcmp("6",words[index]) ||!strcmp("7",words[index]) ||!strcmp("8",words[index]) ||!strcmp("9",words[index]) ||!strcmp("10",words[index]) ||!strcmp("11",words[index]) ||!strcmp("12",words[index]) ||!strcmp("13",words[index]) ||!strcmp("14",words[index]) ||!strcmp("15",words[index]) ||!strcmp("16",words[index]) ||!strcmp("17",words[index]) ||!strcmp("18",words[index]) ||!strcmp("19",words[index]) ||!strcmp("20",words[index]) ||!strcmp("21",words[index]) ||!strcmp("22",words[index]) ||!strcmp("23",words[index]) ||!strcmp("24",words[index]) ||!strcmp("25",words[index]) ||!strcmp("26",words[index]) ||!strcmp("27",words[index]) ||!strcmp("28",words[index]) ||!strcmp("29",words[index]) ||!strcmp("30",words[index]) ||!strcmp("31",words[index]) ||!strcmp("32",words[index]) ||!strcmp("33",words[index]) ||!strcmp("34",words[index]) ||!strcmp("35",words[index]) )
+		{
+			printf("Number?\n");
+		}
+		else if (!strcmp("OPERATOR",words[index]))
+		{
+			printf("We gotta op\n");
+		}
+		else if (!strcmp("EXPRESSION",words[index]))
+		{
+			printf("We gotta expression\n");
+		}
+		else if (!strcmp("IDENTIFIER",words[index]))
+		{
+			printf("We gotta expression\n");
+		}
+	}
 }
 

@@ -13,19 +13,19 @@ int main ()
 
 	for (index = 0; index < word_count; index++)
 	{
-		printf("%s \t\t|--> index: %i", words[index], index);
+		printf("%i \t\t %s", index,words[index]);
 
 		if(!strcmp("LET",words[index]))
 		{
-		printf("\t\t\tEXPRESSION: LET");
+		printf("\t\t\tEXPRESSION LET");
 		}
 		else if(!strcmp("IF",words[index]))
 		{
-		printf("\t\t\tEXPRESSION: IF");
+		printf("\t\t\tEXPRESSION IF");
 		}
 		else if(!strcmp("+",words[index])||!strcmp("*",words[index])||!strcmp("/",words[index])||!strcmp("-",words[index])||!strcmp("=",words[index]))
 		{
-		printf("\t\t\tEXPRESSION: OPERATOR");
+		printf("\t\t\tEXPRESSION OPERATOR");
 		}
 		else
 		{
